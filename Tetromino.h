@@ -30,7 +30,7 @@ public:
 
 	void Init();
 	void SwapShape();
-	void Rotate(Field);
+	void Rotate(Field field);
 	void ForceDown();
 	TetrominoShape GetShape();
 	int getX();

@@ -1,12 +1,5 @@
-﻿  Field.cpp
-C:\Users\Artem\source\repos\Tetris\Tetris\Tetromino.h(7,23): warning C4099:  'TetrominoShape': type name first seen using 'class' now seen using 'struct'
-  Source.cpp
-C:\Users\Artem\source\repos\Tetris\Tetris\Tetromino.h(7): message :  see declaration of 'TetrominoShape'
+﻿  Source.cpp
 C:\Users\Artem\source\repos\Tetris\Tetris\Tetromino.h(7,23): warning C4099:  'TetrominoShape': type name first seen using 'class' now seen using 'struct'
 C:\Users\Artem\source\repos\Tetris\Tetris\Tetromino.h(7): message :  see declaration of 'TetrominoShape'
-  Tetromino.cpp
-C:\Users\Artem\source\repos\Tetris\Tetris\Source.cpp(35,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Artem\source\repos\Tetris\Tetris\Field.h(3,21): warning C4099:  'TetrominoShape': type name first seen using 'struct' now seen using 'class'
-  Generating Code...
-C:\Users\Artem\source\repos\Tetris\Tetris\Tetromino.h(7): message :  see declaration of 'TetrominoShape'
+C:\Users\Artem\source\repos\Tetris\Tetris\Source.cpp(36,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Tetris.vcxproj -> C:\Users\Artem\source\repos\Tetris\Debug\Tetris.exe

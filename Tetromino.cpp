@@ -69,7 +69,7 @@ void Tetromino::SwapShape() {
 	setDefaultCordinates();
 }
 
-void Tetromino::Rotate(Field) {
+void Tetromino::Rotate(Field field) {
 	TetrominoShape newShape;
 
 	newShape.size = currentShape.size;
@@ -80,7 +80,9 @@ void Tetromino::Rotate(Field) {
 		}
 	}
 
-	currentShape = newShape;
+	if (field.isFit(y, x, newShape)) {
+		currentShape = newShape;
+	}
 }
 
 void Tetromino::ForceDown() {

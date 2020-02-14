@@ -3,6 +3,7 @@
 #include <ctime>
 #include "Field.h"
 #include "Tetromino.h"
+#include "Defines.h"
 
 void init();
 int menu();
@@ -48,14 +49,27 @@ void init() {
 	SetConsoleCursorInfo(wndHandle, &structCursorInfo);
 }
 
+#define MENU_HORIZONTAL_CENTER_OFSET 4
+#define MENU_VERTICAL_OFFSET 10
 int menu() {
+	static const auto wndHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD coords;
+
 	char input = '\0';
 	int item = 0;
 	while (input != 'e') {
+		coords.X = WINDOWS_WIDTH / 2 + MENU_HORIZONTAL_CENTER_OFSET;
+		coords.Y = WINDOWS_HEIGHT / 2 + MENU_VERTICAL_OFFSET;
+		SetConsoleCursorPosition(wndHandle, coords);
 		std::cout << "Start" << std::endl;
+		coords.X = WINDOWS_WIDTH / 2 + MENU_HORIZONTAL_CENTER_OFSET;
+		coords.Y = WINDOWS_HEIGHT / 2 + MENU_VERTICAL_OFFSET + 1;
+		SetConsoleCursorPosition(wndHandle, coords);
 		std::cout << "Leaderboard" << std::endl;
+		coords.X = WINDOWS_WIDTH / 2 + MENU_HORIZONTAL_CENTER_OFSET;
+		coords.Y = WINDOWS_HEIGHT / 2 + MENU_VERTICAL_OFFSET + 2;
+		SetConsoleCursorPosition(wndHandle, coords);
 		std::cout << "Exit";
-		input = getchar();
 		if (input == 's') {
 			item = item + 1 % 3;
 		}
